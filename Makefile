@@ -1,17 +1,17 @@
 CC=gcc
 CXX=g++
 RM=rm -f
-CPPFLAGS=-g -O3 -std=c++11
+CPPFLAGS=-g -O3 -std=c++11 -march=native
 LDFLAGS=-g
 LDLIBS=
 
-SRCS=mersenne_twister.cc fastfunc.cc
+SRCS=benchmark.cc fastfunc.cc
 OBJS=$(subst .cc,.o,$(SRCS))
 
-all: tool
+all: benchmark
 
-tool: $(OBJS)
-	    g++ $(LDFLAGS) -o tool $(OBJS) $(LDLIBS) 
+benchmark: $(OBJS)
+	    g++ $(LDFLAGS) -o benchmark $(OBJS) $(LDLIBS) 
 
 depend: .depend
 
