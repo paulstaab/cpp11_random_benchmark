@@ -17,7 +17,7 @@ to run the benchmark. You need to install boost and a recent version g++.
 Results
 -------
 In short, the results which may be specific to my system and the tested
-distribution are:
+distributions are:
 
 - `boost/andom` is consistently faster than `std::random`.
 - Doing the quantile transformations myself is consistently faster than using the
